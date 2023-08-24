@@ -1,0 +1,60 @@
+.supercontenedor{
+    border-radius: 5%;
+    border-top: 12px;
+    margin-left: 30%;
+    margin-top: 7%;
+    margin-right: 30%;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    background-color: rgba(163, 126, 126, 0.11);
+}
+
+h1{
+    color: white;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-size: 5em;
+    user-select: none; 
+}
+
+.labels{
+    font-size: 2em;
+    user-select: none; 
+}
+
+.recuadros{
+    border-radius: 25.5px;
+    height: 40px;
+    width: 50%;
+    align-content: center;
+    user-select: none; 
+    text-align: center;
+}
+
+.ingresar{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 51px;
+    height: 5%;
+    width: 15%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.185);
+    user-select: none; 
+}
+.registrarbtn{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    user-select: none; 
+}
+
+@font-face {
+    font-family: SecretHalloween;
+    src: url('../fuentes/SecretHalloween.ttf');
+}
+
+.SecretHalloween{
+    font-family: SecretHalloween;
+    text-shadow: 1px 4px 5px  rgb(0, 0, 0);
+}
