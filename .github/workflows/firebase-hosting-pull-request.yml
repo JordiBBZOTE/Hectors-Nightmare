@@ -12,5 +12,5 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_HECTOR_S_NIGHTMARE }}'
-          projectId: hector-s-nightmare
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_HECTOR_S_NIGHTMARE_D41A3 }}'
+          projectId: hector-s-nightmare-d41a3
