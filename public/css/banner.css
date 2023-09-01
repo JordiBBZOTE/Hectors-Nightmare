@@ -1,7 +1,10 @@
+*{
+    text-align: center;
+}
+
 body{
     margin: 0;
     padding: 0;
-    background-image: url("../images/fondo.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -108,7 +111,7 @@ body{
 
 
 .footer{
-    margin-left: 45%;
+  
     color: white;
     margin-top: 8%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -132,6 +135,23 @@ label{
     src: url('../fuentes/adrip1.ttf');
 }
 
-.adrip1{
+
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.adrip1, .contenedor, footer{
+    top: 10px;
+    left: 10px;
+    position: relative;
+    z-index: 2;
+    color: white;
     font-family: 'adrip1';
 }
+

@@ -6,7 +6,13 @@
     <link rel="stylesheet" href="{{asset('/css/styles.css')}}">
     <title>@yield('title')</title>
 </head>
+<form action="logout" method="GET" style="display: inline">
+    @csrf
+    <a class="CerrarSession" href="#" onclick="this.closest('form').submit()">Cerrar Sesion</a>
+</form>
+
 <body>
     @yield('content')
+    
 </body>
 </html>

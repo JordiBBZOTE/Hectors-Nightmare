@@ -26,5 +26,8 @@ Route::controller(LoginController::class)->group(function(){
 Route::controller(HomeController::class)->group(function(){
     Route::post('home', 'index');
     Route::get('home/main', 'main')->middleware('auth');
+    Route::get('home/story', 'story');
+    Route::get('home/scores', 'scores');
+    Route::get('home/logout', 'logout');
 });
 

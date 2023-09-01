@@ -9,15 +9,19 @@ use Illuminate\Validation\ValidationException;
 
 class HomeController extends Controller
 {
-    public function index(){
-        $credentials = request()->validate([
-        'email' => ['required', 'email', 'string'],
-        'password' => ['required', 'string']]);
-        $remember = request()->filled('remember');
-        if(Auth::attempt($credentials, $remember)){
-            request()->session()->regenerate();
-            return redirect('home/main');
+    public function index(Request $request){
+        
+        $User = "juanka";                               //HAY QUE CACHAR EL DATO 'NAME' DE LA BD
+        $remember = $request->filled('remember');
+
+        if(Auth::attempt($request->only('email', 'password'), $remember)){
+            $request->session()->regenerate();
+            
+            return redirect()
+            ->intended('home/main')
+            ->with('username', $User);
         }
+
         throw ValidationException::withMessages([
             'email' => 'No se encontraron coincidencias'
         ]);
@@ -26,4 +30,21 @@ class HomeController extends Controller
     public function main(){
         return view('home.banner');
     }
+
+    public function story(){
+        return view('home.story');
+    }
+
+    public function scores(){
+        return view('home.scores');
+    }
+
+    public function logout(Request $request){
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken(); 
+        return redirect()
+        ->intended('login');
+    }
+
 }
