@@ -16,11 +16,11 @@
         <source src="../images/Home.mkv" type="video/mp4" />
     </video>
     
-
+<div class="usuario">
     @if(session('username'))
         <br>{{session('username')}}
     @endif
-
+</div>
     <div class="Recuadro"></div>
     <div class="TituloBanner">
         

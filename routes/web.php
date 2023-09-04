@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
@@ -15,7 +16,7 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-
+//dd(User::first()->toArray());
 
 Route::controller(LoginController::class)->group(function(){
     Route::get('/', 'banner');
@@ -28,6 +29,6 @@ Route::controller(HomeController::class)->group(function(){
     Route::get('home/main', 'main')->middleware('auth');
     Route::get('home/story', 'story');
     Route::get('home/scores', 'scores');
-    Route::get('home/logout', 'logout');
+    Route::post('home/logout', 'logout');
 });
 

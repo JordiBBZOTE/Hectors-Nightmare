@@ -52,3 +52,9 @@ video{
     position: relative;
     z-index: 2;
 }
+
+.usuario{
+    position: relative;
+    z-index: 2;
+    color: white;
+}
