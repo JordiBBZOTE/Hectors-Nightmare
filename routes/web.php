@@ -22,6 +22,7 @@ Route::controller(LoginController::class)->group(function(){
     Route::get('/', 'banner');
     Route::get('login', 'index')->name('login');
     Route::get('login/form', 'createAccount');
+    Route::post('login/validacion', 'validacion');
 });
 
 Route::controller(HomeController::class)->group(function(){

@@ -1,0 +1,31 @@
+Codigos de respuesta: 
+    200: Coneccion correcta
+    201: Usuario Registrado
+    202: Usuario ya existe 
+    203: Usuario no existe
+    204: user o password incorrectos
+    205: Inicio de sesion correcta
+    206: Usuario Actualizado
+
+    400: Error en las credenciales
+    401: Error al crear el usuario
+    402: Error datos faltantes
+    404: Error Base de datos caida
+
+funciones()
+    check()
+    userInsert(username, password, imgUser, level)
+    userCheck(username)
+    login(username, password)
+    userEdit(username, password, newpass, imgUser, level)
+
+
+$db_server = "localhost";
+$db_database = "test";
+$db_user = "root";
+$db_pass = "";
+
+$db_server = "localhost";
+$db_database = "id21198720_hectornightmares";
+$db_user = "id21198720_jordivan";
+$db_pass = "PasswordCrazy123OMG!";

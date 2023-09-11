@@ -57,5 +57,5 @@ class HomeController extends Controller
         return redirect()
         ->intended('login');
     }
-
+    
 }

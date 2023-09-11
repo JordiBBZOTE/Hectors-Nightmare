@@ -21,10 +21,17 @@
 
         <div class="contieneHistorias">
             <h1>HISTORIA</h1>
-        </div>
+            <div class="leyendbylegend">
+            
+                <img id="leyenda" src="../images/historias/fantasmaniña.jpeg" alt="Niña en laboratorios de Quimica" >
+            </div>
         
+        <script>
+            img = document.getElementById('leyenda')
+            img.style.transform = 'scale()'
+        </script>
 </div>
-
+</div>
     <footer class="footer">
         <p>&copy; 2023 Jorge Márquez, Ivan Caldera & Rita Camacho</p>
           <a class="enlaces" href="/acerca-de">Acerca de  </a>
