@@ -1,5 +1,5 @@
 body, video{
-    background-color: black;
+    
     position: absolute;
     top: 0;
     left: 0;
@@ -8,6 +8,10 @@ body, video{
     object-fit: cover;
     
 }
+.bodeishon{
+    background-image: url("../images/fondo.png");
+}
+
 .footer, .check{
     position: relative;
     z-index: 2;
@@ -82,4 +86,8 @@ h1{
     text-align: center;
     border: 1px solid black;
     
+}
+.avatar{
+    height: 55px;
+    width: 55px;
 }

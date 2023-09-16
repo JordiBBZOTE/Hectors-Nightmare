@@ -12,8 +12,8 @@
     </video>
     <form method="POST" action="home">
         @csrf
-        <label class="labels" for="email">Usuario</label><br>
-        <input name="email" value="{{old('email')}}" class="recuadros" type="email" placeholder="Ingrese su usuario" autocomplete="off" id="email" required autofocus><br>
+        <label class="labels" for="email">Email</label><br>
+        <input name="email" value="{{old('email')}}" class="recuadros" type="email" placeholder="Ingrese su correo" autocomplete="off" id="email" required autofocus><br>
         <br><label  class="labels" for="#">Contraseña</label><br>
         <input name="password" class="recuadros" type="password" placeholder="Ingrese su contraseña" required><br>
         <br><label class="check"><input type="checkbox" name="remember">Recordar sesion</label>
