@@ -1,0 +1,91 @@
+#modalbaños::backdrop{
+    background-color: rgba(0, 0, 0, 0.685);
+}
+
+#modalbaños{
+    max-width: 90ch;
+    background-color: rgba(0, 0, 0, 0.685);
+    color: rgb(211, 214, 195);
+}
+
+#modalbaños h1{
+    max-width: 80ch;
+    color: rgb(192, 51, 41);
+}
+
+
+
+
+
+#modalshusheos::backdrop{
+    background-color: rgba(0, 0, 0, 0.685);
+}
+
+#modalshusheos{
+    max-width: 90ch;
+    background-color: rgba(0, 0, 0, 0.685);
+    color: rgb(211, 214, 195);
+}
+
+#modalshusheos h1{
+    max-width: 80ch;
+    color: rgb(192, 51, 41);
+}
+
+
+
+
+
+#modalasechadora::backdrop{
+    background-color: rgba(0, 0, 0, 0.685);
+}
+
+#modalasechadora{
+    max-width: 90ch;
+    background-color: rgba(0, 0, 0, 0.685);
+    color: rgb(211, 214, 195);
+}
+
+#modalasechadora h1{
+    max-width: 80ch;
+    color: rgb(192, 51, 41);
+}
+
+
+
+
+
+#modalwendy::backdrop{
+    background-color: rgba(0, 0, 0, 0.685);
+}
+
+#modalwendy{
+    max-width: 90ch;
+    background-color: rgba(0, 0, 0, 0.685);
+    color: rgb(211, 214, 195);
+}
+
+#modalwendy h1{
+    max-width: 80ch;
+    color: rgb(192, 51, 41);
+}
+
+
+
+
+
+#modalrostros::backdrop{
+    background-color: rgba(0, 0, 0, 0.685);
+}
+
+#modalrostros{
+    max-width: 90ch;
+    background-color: rgba(0, 0, 0, 0.685);
+    color: rgb(211, 214, 195);
+}
+
+#modalrostros h1{
+    max-width: 80ch;
+    color: rgb(192, 51, 41);
+}
+

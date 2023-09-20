@@ -6,10 +6,7 @@
 @section('content')
 <div class="supercontainer">
 
-    <form action="home" method="POST">
-        @csrf
-        <a class="enlaces" href="#" onclick="this.closest('form').submit()">Cerrar Sesion</a>
-    </form>
+   
 
     @if(session('username'))
     <br>
@@ -25,10 +22,5 @@
 
 
 </div>
-    <footer class="footer">
-        <p>&copy; 2023 Jorge Márquez, Ivan Caldera & Rita Camacho</p>
-          <a class="enlaces" href="/acerca-de">Acerca de  </a>
-        
-      </footer>
 
 @endsection

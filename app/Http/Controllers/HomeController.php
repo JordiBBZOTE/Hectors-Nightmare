@@ -12,17 +12,14 @@ class HomeController extends Controller
 {
     public function index(Request $request){
         
-                                    //HAY QUE CACHAR EL DATO 'NAME' DE LA BD
         $remember = $request->filled('remember');
-
         $User = User::where('email', $request->email)->first();
-
+      
         if($User->password === sha1($request->password)){
             Auth::login($User);
             $request->session()->regenerate();
             return redirect()
-            ->intended('home/main')
-            ->with('username', $User->username);
+            ->intended('home/main');
         }
 
         /*if(Auth::attempt($request->only('email', 'password'), $remember)){
@@ -40,10 +37,6 @@ class HomeController extends Controller
 
     public function main(){
         return view('home.banner');
-    }
-
-    public function story(){
-        return view('home.story');
     }
 
     public function scores(){
