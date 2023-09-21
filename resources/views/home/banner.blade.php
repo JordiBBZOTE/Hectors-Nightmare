@@ -6,11 +6,6 @@
 
 <div class="supercontainer">
 
-    <form action="home" method="POST">
-        @csrf
-        
-    </form>
-
     <video autoplay muted loop>
         <source src="../images/Home.mkv" type="video/mp4" />
     </video>
@@ -29,7 +24,7 @@
         
                 
 <div class="contieneHistorias">
-        <button id="btn_baños_open">Baños del R</button>
+        <button id="btn_baños_open" onclick="baños()">Baños del R</button>
         <dialog id="modalbaños">
             <h1>Los baños del R</h1>
             <h2>Se comenta entre los mismos estudiantes acerca de una sensación de incomodidad y vértigo en los baños del edificio R, se habla desde rituales satánicos hasta presencias malignas que te acechan y causan rechazo incluso antes de entrar a dicho espacio.
@@ -38,7 +33,7 @@
         </dialog>
         <br><br>
 
-        <button id="btn_shusheos_open">Shusheos y llamadas</button>
+        <button id="btn_shusheos_open" onclick="shusheos()">Shusheos y llamadas</button>
         <dialog id="modalshusheos">
             <h1>Shusheos y llamadas</h1>
             <h2>Se comenta que no es recomendable caminar pasadas las 9 de la noche por el estacionamiento de revolución a menos que te quieras llevar un mal rato de paranoia, puesto que se habla de haber escuchado sonidos de lechuzas (siendo que no hay por la zona) así como susurros y llamadas desde varios lados que buscan llamar tu atención.</h2>
@@ -46,7 +41,7 @@
         </dialog>
         <br><br>
 
-        <button id="btn_asechadora_open">Asechadora</button>
+        <button id="btn_asechadora_open" onclick="asechadora()">Asechadora</button>
         <dialog id="modalasechadora">
             <h1>Asechadora</h1>
             <h2>El enemigo abordado en el videojuego hace referencia al relato (Basado en hechos reales modificado por respeto)
@@ -56,7 +51,7 @@
         </dialog>
         <br><br>
 
-        <button id="btn_wendy_open">Wendy</button>
+        <button id="btn_wendy_open" onclick="wendy()">Wendy</button>
         <dialog id="modalwendy">
             <h1>Wendy</h1>
             <h2>Se sabe y se murmura entre estudiantes, maestros y trabajadores de CUCEI que alrededor de los laboratorios del edificio G se puede ver ocasionalmente lo que parece una niña cuya característica más representativa en su apariencia es que se le aprecia con toda su ropa y el cabello mojados.
@@ -67,7 +62,7 @@
         </dialog>
         <br><br>
 
-        <button id="btn_rostros_open">Rostros en las ventanas</button>
+        <button id="btn_rostros_open" onclick="rostros()">Rostros en las ventanas</button>
         <dialog id="modalrostros">
             <h1>Rostros en las ventanas</h1>
             <h2>Solo quienes se han quedado hasta noche dentro de las instalaciones y son susceptibles o bien… Hubo algo que los obligó a voltear: pueden constatar y dar fe de que es posible ver, aunque sea de reojo y por una centésima de segundo: rostros humanos en las ventanas de los salones.
@@ -81,6 +76,78 @@
 
 </div>
 </div>
-    
 
+
+<script>
+    function baños() {
+       const btn_baños_open = document.querySelector("#btn_baños_open");
+       const btn_baños_close = document.querySelector("#btn_baños_close");
+       const modalbaños = document.querySelector("#modalbaños");
+
+       btn_baños_open.addEventListener("click",()=>{
+       modalbaños.showModal();
+       })
+       btn_baños_close.addEventListener("click",()=>{
+       modalbaños.close();
+       })
+    }
+
+    function shusheos(){
+        const btn_shusheos_open = document.querySelector("#btn_shusheos_open");
+        const btn_shusheos_close = document.querySelector("#btn_shusheos_close");
+        const modalshusheos = document.querySelector("#modalshusheos");
+
+        btn_shusheos_open.addEventListener("click",()=>{
+            modalshusheos.showModal();
+        })
+
+        btn_shusheos_close.addEventListener("click",()=>{
+            modalshusheos.close();
+        })
+    }
+
+    function asechadora(){
+        const btn_asechadora_open = document.querySelector("#btn_asechadora_open");
+        const btn_asechadora_close = document.querySelector("#btn_asechadora_close");
+        const modalasechadora = document.querySelector("#modalasechadora");
+
+        btn_asechadora_open.addEventListener("click",()=>{
+            modalasechadora.showModal();
+        })
+
+        btn_asechadora_close.addEventListener("click",()=>{
+            modalasechadora.close();
+        })
+   }
+
+    function wendy(){
+        const btn_wendy_open = document.querySelector("#btn_wendy_open");
+        const btn_wendy_close = document.querySelector("#btn_wendy_close");
+        const modalwendy = document.querySelector("#modalwendy");
+
+        btn_wendy_open.addEventListener("click",()=>{
+            modalwendy.showModal();
+        })
+
+        btn_wendy_close.addEventListener("click",()=>{
+            modalwendy.close();
+        })
+    }
+
+    function rostros(){
+       
+        const btn_rostros_open = document.querySelector("#btn_rostros_open");
+        const btn_rostros_close = document.querySelector("#btn_rostros_close");
+        const modalrostros = document.querySelector("#modalrostros");
+
+        btn_rostros_open.addEventListener("click",()=>{
+            modalrostros.showModal();
+        })
+
+        btn_rostros_close.addEventListener("click",()=>{
+            modalrostros.close();
+        })
+    }
+</script>
+    
 @endsection
