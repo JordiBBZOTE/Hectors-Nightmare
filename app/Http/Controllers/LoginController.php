@@ -38,13 +38,20 @@ class LoginController extends Controller
             $level = 1;
             $remembertoken = bin2hex(random_bytes(16));            ;
 
-            
-        
-            $sql = "INSERT INTO usuarios (username, email, password, Imguser, level, remember_token) VALUES ('$username', '$email', '$password', '$image', '$level', '$remembertoken')";
-            $result = mysqli_query($conn, $sql);
-            
-            return redirect()
-            ->intended('login');
+            $consult="SELECT*FROM usuarios";
+            $results=mysqli_query($conn,$consult);
+
+            $filas=mysqli_fetch_array($results);
+
+            if($filas['username']==$username || $filas['email']==$email){
+                echo '<script language="javascript">alert("Usuario o email existente retroceda porfis");</script>';
+            }else{
+                $sql = "INSERT INTO usuarios (username, email, password, Imguser, level, remember_token) VALUES ('$username', '$email', '$password', '$image', '$level', '$remembertoken')";
+                $result = mysqli_query($conn, $sql);
+                
+                return redirect()
+                ->intended('login');
+            }
         }
     }
 }
