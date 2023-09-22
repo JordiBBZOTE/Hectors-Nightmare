@@ -155,3 +155,10 @@ video{
     font-family: 'adrip1';
 }
 
+
+.aboutus{
+    background-color: rgba(10, 113, 204, 0);
+    color: rgb(208, 211, 199);
+    border: none;
+    cursor: pointer;
+}

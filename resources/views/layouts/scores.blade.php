@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset('/css/styles.css')}}">
-    <link rel="stylesheet" href="{{asset('/css/modalstyles.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/scores.css')}}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{asset('/css/script.js')}}"></script>
  
@@ -14,10 +14,10 @@
 <div class="menu-container">
     <button class="menu-button">Menú de opciones</button>
     <div class="menu-dropdown">
-        <br><a href="main"><button class="botonlogged" role="button"><span>Home!</span></button></a>        
+        <br><a href="main"><button class="botonlogged" role="button"><span>Home!</span></button></a>
         <br><a href="https://drive.google.com/u/0/uc?id=15Mr_Y6aln1_9nYOwnlr4cRXWyE7GIEyU&export=download"><button class="botonlogged" role="button" download="Hectors_Nightmare.pdf"><span>Descargar!</span></button></a>
         <br><a href="scores"><button class="botonlogged" role="button"><span>Puntuacion!</span></button></a>
-        
+        	
         <form action="logout" method="POST" style="display: inline">
             @csrf
             <a class="CerrarSession" href="#" onclick="this.closest('form').submit()">Cerrar Sesion</a>

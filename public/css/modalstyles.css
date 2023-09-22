@@ -11,6 +11,7 @@
 #modalbaños h1{
     max-width: 80ch;
     color: rgb(192, 51, 41);
+    font-weight: bold;
 }
 
 
@@ -30,6 +31,7 @@
 #modalshusheos h1{
     max-width: 80ch;
     color: rgb(192, 51, 41);
+    font-weight: bold;
 }
 
 
@@ -49,6 +51,7 @@
 #modalasechadora h1{
     max-width: 80ch;
     color: rgb(192, 51, 41);
+    font-weight: bold;
 }
 
 
@@ -68,6 +71,7 @@
 #modalwendy h1{
     max-width: 80ch;
     color: rgb(192, 51, 41);
+    font-weight: bold;
 }
 
 
@@ -87,5 +91,50 @@
 #modalrostros h1{
     max-width: 80ch;
     color: rgb(192, 51, 41);
+    font-weight: bold;
 }
 
+
+
+.storybutton{
+    display: inline-flex;
+    width: 30%;
+    height: 5%;
+    background-image: url("../images/botonblood.jpg");
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    font-family: Georgia, 'Times New Roman', Times, serif;  
+    font-size: 100%;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: white;
+    font-weight: bold;
+}
+.storybutton span{
+    position: relative;
+    z-index: 1;
+    transition: .3s ease all;
+}
+.storybutton:after{
+    content: "";
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: -133%;
+    border-bottom: 80px solid rgba(151, 6, 6, 0.479);
+    border-right: 80px solid transparent;
+    transition: .4s ease-in-out all;
+}
+
+.storybutton:hover::after{
+    left: 0;
+}

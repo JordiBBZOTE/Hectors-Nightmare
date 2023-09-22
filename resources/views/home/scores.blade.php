@@ -1,7 +1,6 @@
-@extends('layouts.plantillalogged')
+@extends('layouts.scores')
 
 @section('title', 'scores')
-<link rel="stylesheet" href="{{asset('/css/styles.css')}}">
 
 @section('content')
 <div class="supercontainer">
@@ -17,8 +16,7 @@
     <h1>TABLA DE POSICIONES</h1>
 
 
-
-
+    
 
 
 </div>

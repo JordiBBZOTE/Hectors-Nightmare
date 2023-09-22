@@ -1,0 +1,17 @@
+body{
+    background-image: url("../images/botonblood.jpg");
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-size: 12px;
+}
+
+.aboutus{
+    background-color: rgba(10, 113, 204, 0);
+    color: rgb(208, 211, 199);
+    border: none;
+    cursor: pointer;
+}
