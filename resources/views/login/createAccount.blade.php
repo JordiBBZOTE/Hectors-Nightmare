@@ -12,7 +12,7 @@
 
 
     
-    <form action="validacion" method="POST">
+    <form action="validacion" method="POST" id="val">
         @csrf
         <label class="labels" for="username">Usuario</label><br>
         <input class="recuadros" type="text" placeholder="Ingresa tu usuario" name="username" required><br>
@@ -35,7 +35,30 @@
         <label for="3"><img class="avatar" src="../images/avatares/Avatar4.png" alt="Avatar4"></label>
         <br>
         <br><input  class="Registrar"  type="submit" value="Crear">
+
+        <script>
+            document.getElementById("val").addEventListener("submit", function(event) {
+            var radios = document.getElementsByName("imguser");
+            var algunoSeleccionado = false;
+
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    algunoSeleccionado = true;
+                    break;
+                }
+            }
+
+            if (!algunoSeleccionado) {
+                event.preventDefault(); // Previene el envío del formulario
+                document.getElementById("error").textContent = "Selecciona al menos una imagen.";
+            } else {
+                document.getElementById("error").textContent = ""; // Borra el mensaje de error si había uno
+            }
+        });
+        </script>
+
     </form>
+    <div id="error" style="color: red;"></div>
 </div>
 </body>
 

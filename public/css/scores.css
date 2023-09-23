@@ -15,3 +15,11 @@ body{
     border: none;
     cursor: pointer;
 }
+
+
+.ranking{
+    color: white;
+    align-self: center;
+    margin: auto;
+    margin-top: 10%;
+}
