@@ -6,8 +6,8 @@ body, video{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
 }
+
 .bodeishon{
     background-image: url("../images/fondo.png");
 }
@@ -97,4 +97,99 @@ h1{
     color: rgb(208, 211, 199);
     border: none;
     cursor: pointer;
+}
+
+.aboutus{
+    display: inline-flex;
+    color: rgb(255, 255, 255);
+    font-family: Georgia, 'Times New Roman', Times, serif;  
+    font-size: 100%;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: white;
+    font-weight: bold;
+}
+.aboutus span{
+    position: relative;
+    z-index: 1;
+    transition: .3s ease all;
+}
+.aboutus:after{
+    content: "";
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: -133%;
+    border-bottom: 80px solid rgba(151, 6, 6, 0.479);
+    border-right: 80px solid transparent;
+    transition: .4s ease-in-out all;
+}
+
+.aboutus:hover::after{
+    left: 0;
+}
+
+
+
+#modalaboutus::backdrop{
+    background-color: rgba(0, 0, 0, 0.685);
+}
+
+#modalaboutus{
+    max-width: 90ch;
+    background-color: rgba(0, 0, 0, 0.685);
+    color: rgb(211, 214, 195);
+}
+
+#modalaboutus h1{
+    max-width: 80ch;
+    color: rgb(192, 51, 41);
+    font-weight: bold;
+}
+
+#modalaboutus a{
+    max-width: 100ch;
+    font-size: 90%;
+    color: rgb(22, 132, 175);
+    text-decoration: none;
+}
+
+
+#modalcredits::backdrop{
+    background-color: rgba(0, 0, 0, 0.685);
+}
+
+#modalcredits{
+    max-width: 100ch;
+    background-color: rgba(0, 0, 0, 0.685);
+    color: rgb(211, 214, 195);
+}
+
+#modalcredits h2{
+    max-width: 100ch;
+    color: rgb(192, 51, 41);
+    font-weight: bold;
+}
+
+#modalcredits a{
+    max-width: 100ch;
+    font-size: 90%;
+    color: rgb(22, 132, 175);
+    text-decoration: none;
+}
+
+.text-danger{
+    position: absolute;
+    z-index: 1;
+    color: red;
+    font-size: 120%;
 }

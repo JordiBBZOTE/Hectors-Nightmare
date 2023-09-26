@@ -12,15 +12,20 @@ class HomeController extends Controller
 {
     public function index(Request $request){
         
-        $remember = $request->filled('remember');
-        $User = User::where('email', $request->email)->first();
+            $remember = $request->filled('remember');
+            $User = User::where('email', $request->email)->first();
       
-        if($User->password === sha1($request->password)){
-            Auth::login($User);
-            $request->session()->regenerate();
-            return redirect()
-            ->intended('home/main');
-        }
+            if (!$User) { 
+                return redirect()->back()->withErrors(['email' => 'El email no existe.']);
+            }
+            if($User->password === sha1($request->password)){
+                Auth::login($User);
+                $request->session()->regenerate();
+                return redirect()
+                ->intended('home/main');
+            }else{
+                return redirect()->back()->withErrors(['email' => 'Contraseña Incorrecta.']);
+            }
 
         /*if(Auth::attempt($request->only('email', 'password'), $remember)){
             $request->session()->regenerate();
@@ -29,10 +34,6 @@ class HomeController extends Controller
             ->intended('home/main')
             ->with('username', $User);
         }*/
-
-        throw ValidationException::withMessages([
-            'email' => 'No se encontraron coincidencias'
-        ]);
     }
 
     public function main(){

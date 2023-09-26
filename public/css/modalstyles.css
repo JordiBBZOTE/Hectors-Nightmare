@@ -1,3 +1,21 @@
+#modalhector::backdrop{
+    background-color: rgba(0, 0, 0, 0.685);
+}
+
+#modalhector{
+    max-width: 90ch;
+    background-color: rgba(0, 0, 0, 0.685);
+    color: rgb(211, 214, 195);
+}
+
+#modalhector h1{
+    max-width: 80ch;
+    color: rgb(192, 51, 41);
+    font-weight: bold;
+}
+
+
+
 #modalbaños::backdrop{
     background-color: rgba(0, 0, 0, 0.685);
 }
@@ -77,7 +95,6 @@
 
 
 
-
 #modalrostros::backdrop{
     background-color: rgba(0, 0, 0, 0.685);
 }
@@ -93,7 +110,6 @@
     color: rgb(192, 51, 41);
     font-weight: bold;
 }
-
 
 
 .storybutton{

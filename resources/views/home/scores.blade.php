@@ -9,11 +9,11 @@
 
     <div class="TituloBanner">
     <h1>TABLA DE POSICIONES</h1>
-
+        
     <?php
         if($resultados->num_rows > 0) {
         echo "<table class='ranking' border='1'>";
-        echo "<tr><th>Lugar</th><th>username</th><th>time</th><th>score</th></tr>"; 
+        echo "<tr><th>Lugar</th><th>Usuario</th><th>Tiempo/s</th><th>Puntaje</th></tr>"; 
         
         $cont = 1;
         while($fila = $resultados->fetch_assoc()) {
@@ -30,11 +30,13 @@
     } else {
         echo "0 resultados.";
     }
-
-    echo    "Mi puntuacion";
+    ?>
+    <br>
+   <h2>Mi puntuacion</h2>
+   <?php
     if($miResultado->num_rows > 0) {
         echo "<table class='ranking' border='1'>";
-        echo "<tr><th>Lugar</th><th>username</th><th>time</th><th>score</th></tr>";  // Suponiendo que tienes estas columnas en tu tabla
+        echo "<tr><th>Lugar</th><th>Usuario</th><th>Tiempo/s</th><th>Puntaje</th></tr>";  // Suponiendo que tienes estas columnas en tu tabla
             $rank = $ranking->fetch_assoc();
         while($fila = $miResultado->fetch_assoc()) {
             echo "<tr>";
